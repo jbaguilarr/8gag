@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+
+        <ion-buttons left>
+            <button ion-button (click)="cerrar_modal()">
+              Cerrar
+            </button>
+        </ion-buttons>
+        <ion-title text-center>Crear post</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Titulo</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwMbj_g3_ywF9vkxQQ9FHYjFJSYodxfCMwKfW4CzUZROK1OqhC">
+        </ion-item>
+    </ion-list>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <button ion-button block icon-left>
+                  <ion-icon name="photos"></ion-icon>
+                  Seleccionar
+              </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button block icon-left>
+                  <ion-icon name="camera"></ion-icon>
+                  Camara
+              </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
