@@ -9,19 +9,19 @@
 <ion-content>
 
 
-    <ion-card *ngFor="let item of items | async">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwMbj_g3_ywF9vkxQQ9FHYjFJSYodxfCMwKfW4CzUZROK1OqhC">
+    <ion-card *ngFor="let post of _cap.imagenes">
+        <img [src]="post.img">
 
         <ion-card-content>
             <ion-card-title>
-                Post 1
+                {{post.titulo}}
             </ion-card-title>
         </ion-card-content>
 
         <ion-row>
             <ion-col text-right>
 
-                <button ion-button clear small color="primary">
+                <button ion-button clear small color="primary" (click)="facebookShare(post)">
                   <ion-icon name="share-alt"></ion-icon>
                   Compartir
                </button>
@@ -36,4 +36,7 @@
 
     </ion-fab>
 
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" [enabled]="hayMas">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
